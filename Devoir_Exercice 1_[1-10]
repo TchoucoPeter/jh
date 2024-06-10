@@ -1,0 +1,120 @@
+#Exercice 1 : Ce travail se divisera en deux parties : Les consignes à exécuter et les résultats après l'exécution
+
+#Première partie : Les consignes à exécuter
+
+#Soit le vecteur x suivant : x = [1 2 3 4 5]
+
+#1. Créons ce vecteur dans R et stockons-le dans un objet que l'on appellera x :
+x <- c(1, 2, 3, 4, 5)
+
+#2. Affichons le mode de x, puis sa longueur :
+mode(x)
+length(x)
+
+#3. Extrayons le premier élément, puis le dernier :
+"["(x,1)
+"["(x,5)
+
+#4. Extrayons les trois premiers éléments et stockons-les dans un objet que l'on nommera a :
+a<- x[c(1,2,3)]
+
+#5. Extrayons les éléments en position 1, 3, 5 ; stockons-les dans un vecteur que l’on nommera b :
+b<- x[c(1,3,5)]
+
+# 6. Additionnons le nombre 10 au vecteur x, puis multiplions le résultat par 2 :
+(x + 10)*2
+
+#7. Effectuons l’addition de a et b, commentons le résultat :
+a + b
+
+    #Commentaire : Les éléments de a et b sont ajoutés un par un, 
+    #le ie élément de b est additionné au ie élément de a.
+
+#8. Effectuer l’addition suivante : x+a, commenter le résultat, puis regarder le résultat de a+x :
+x + a
+
+    #Commentaire : Le ie élément de a est additionné au ie élément de x, 
+    #mais comme la longueur de a est inférieure à celle de x, R procède à ce que l’on appelle le recyclage, 
+    #c’est-à-dire que le vecteur de plus courte taille est répété jusqu’à obtenir une taille égale à celle du plus long, 
+    #puis est tronqué si la taille de l'élément répété dépasse celle du vecteur initialement plus long.
+
+a + x
+
+#9. Multiplions le vecteur x par le scalaire c que l’on fixera à 2 :
+c<-2
+x*c
+
+#10. Effectuons la multiplication de a et b, commentons le résultat ;
+a * b
+
+    # Commentaire : Les éléments de a et b sont multipliés un par un, le ie élément de b est multiplié au ie élément de a.
+
+
+ 
+
+# Deuxième partie : Résultats après l'exécution
+
+> #Soit le vecteur x suivant : x = [1 2 3 4 5]
+> 
+> #1. Créons ce vecteur dans R et stockons-le dans un objet que l'on appellera x :
+> x <- c(1, 2, 3, 4, 5)
+> 
+> #2. Affichons le mode de x, puis sa longueur :
+> mode(x)
+[1] "numeric"
+> length(x)
+[1] 5
+> 
+> #3. Extrayons le premier élément, puis le dernier :
+> "["(x,1)
+[1] 1
+> "["(x,5)
+[1] 5
+> 
+> #4. Extrayons les trois premiers éléments et stockons-les dans un objet que l'on nommera a :
+> a<- x[c(1,2,3)]
+> 
+> #5. Extrayons les éléments en position 1, 3, 5 ; stockons-les dans un vecteur que l’on nommera b :
+> b<- x[c(1,3,5)]
+> 
+> # 6. Additionnons le nombre 10 au vecteur x, puis multiplions le résultat par 2 :
+> (x + 10)*2
+[1] 22 24 26 28 30
+> 
+> #7. Effectuons l’addition de a et b, commentons le résultat :
+> a + b
+[1] 2 5 8
+> 
+>     #Commentaire : Les éléments de a et b sont ajoutés un par un, 
+>     #le ie élément de b est additionné au ie élément de a.
+> 
+> #8. Effectuer l’addition suivante : x+a, commenter le résultat, puis regarder le résultat de a+x :
+> x + a
+[1] 2 4 6 5 7
+Warning message:
+In x + a : longer object length is not a multiple of shorter object length
+> 
+>     #Commentaire : Le ie élément de a est additionné au ie élément de x, 
+>     #mais comme la longueur de a est inférieure à celle de x, R procède à ce que l’on appelle le recyclage, 
+>     #c’est-à-dire que le vecteur de plus courte taille est répété jusqu’à obtenir une taille égale à celle du plus long, 
+>     #puis est tronqué si la taille de l'élément répété dépasse celle du vecteur initialement plus long.
+> 
+> a + x
+[1] 2 4 6 5 7
+Warning message:
+In a + x : longer object length is not a multiple of shorter object length
+> 
+> #9. Multiplions le vecteur x par le scalaire c que l’on fixera à 2 :
+> c<-2
+> x*c
+[1]  2  4  6  8 10
+> 
+> #10. Effectuons la multiplication de a et b, commentons le résultat ;
+> a * b
+[1]  1  6 15
+> 
+>     # Commentaire : Les éléments de a et b sont multipliés un par un, le ie élément de b est multiplié au ie élément de a.
+> 
+
+
+ 
